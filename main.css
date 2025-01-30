@@ -6,14 +6,24 @@
 
 header{
     padding: 20px;
-    background-color: cadetblue;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
 }
 
 .hero {
-    
+    background-color: cornflowerblue;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+
 }
 
 .info-box{
+    background-color: red;
 
 }
 .info-img{
@@ -22,6 +32,7 @@ header{
 .info-text{
     
 }
-p {
-    color:red;
+p, h1 {
+    color:antiquewhite;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
