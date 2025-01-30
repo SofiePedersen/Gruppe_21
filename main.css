@@ -28,12 +28,18 @@ main {
 
 .info-box{
     background-color: red;
+    display: flex;
+    flex-direction: row;
 
 }
 .info-img{
+    display: flex;
 
 }
 .info-text{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
     
 }
 
