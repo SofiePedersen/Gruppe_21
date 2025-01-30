@@ -51,12 +51,10 @@ main {
     flex-direction: column;
     text-align: left;
     justify-content: center;
-
-    
 }
 
 footer{
-    padding: 20px;
+    padding: 50px 20px;
     background-color: blue;
     display: flex;
     justify-content: center;
