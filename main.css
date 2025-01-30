@@ -30,18 +30,28 @@ main {
     background-color: red;
     display: flex;
     flex-direction: row;
+    padding: 20px;
 
 }
 .info-img{
     display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
 
+}
+.info-img img{
+    width: 50%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
 }
 .info-text{
     display: flex;
     flex-direction: column;
     text-align: left;
     justify-content: center;
-    
+
     
 }
 
