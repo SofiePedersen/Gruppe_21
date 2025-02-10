@@ -26,9 +26,10 @@ header {
     text-decoration: none;
     color: #666666;
     font-weight: 800;
-    font-size: 11.5px;
-    letter-spacing: 0.3px;
+    font-size: 10.5px;
+    letter-spacing: 0.1px;
     width: 33%;
+    flex-shrink: 1;
 }
 
 .top-banner__nav a:first-child {
@@ -49,22 +50,36 @@ header {
     width: 62%;
     background-color: aqua;
     margin: auto;
-    height: 50px;
+    height: 50%;
 }
 
 .header__nav--category {
     width: 33%;
+    height: auto;
     background-color: green;
-    display: flex;
     align-items: flex-end;
+    display: flex;
 }
 
-.header__nav--category a {
+.header__nav--category ul {
+    display: inherit;
+}
+
+.header__nav--category ul li {
+    list-style-type: none;
+    margin-right: 0.5rem;
+}
+
+.header__nav--category ul li a {
     text-decoration: none;
     padding: 6px 18px;
+    color: black;
+    font-weight: 700;
+    font-size: 1rem;
+    display: block;
 }
 
-.header__nav--category a:hover {
+.header__nav--category ul li a:hover {
     background-color: aqua;
 }
 
