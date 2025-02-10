@@ -6,29 +6,73 @@
 }
 
 header {
+    background-color: tomato;
+    height: 100px;
+}
+
+.top-banner {
     background-color: #efeff0;
     padding: 0.3%;
 }
 
-.header__top {
+.top-banner__nav {
     display: flex;
     justify-content: space-between;
     width: 62%;
     margin: auto;
 }
 
-.header__top a {
+.top-banner__nav a {
     text-decoration: none;
     color: #666666;
     font-weight: 800;
     font-size: 11.5px;
     letter-spacing: 0.3px;
+    width: 33%;
 }
 
-.header__top a:first-child {
+.top-banner__nav a:first-child {
     text-transform: uppercase;
 }
 
-.header__top a:nth-child(2) {
+.top-banner__nav a:nth-child(2) {
     text-align: center;
+}
+
+.top-banner__nav a:last-child {
+    text-align: right;
+}
+
+.header__top {
+    display: flex;
+    justify-content: space-between;
+    width: 62%;
+    background-color: aqua;
+    margin: auto;
+    height: 50px;
+}
+
+.header__nav--category {
+    width: 33%;
+    background-color: green;
+    display: flex;
+    align-items: flex-end;
+}
+
+.header__nav--category a {
+    text-decoration: none;
+    padding: 6px 18px;
+}
+
+.header__nav--category a:hover {
+    background-color: aqua;
+}
+
+#logo-image {
+    width: 132px;
+}
+
+#login {
+    background-color: green;
+    width: 33%;
 }
