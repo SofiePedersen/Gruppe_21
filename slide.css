@@ -7,37 +7,42 @@ body {
 }
 
 /*SLIDESHOW CONTAINER*/
+.slide__container{
+    padding-bottom: 30px;
+}
+
+/*KNAPPER OG OSV*/
 .category__box {
-    margin: 20px;
-    padding: 15px;
+    padding: 35px;
 }
 
-.category__box p {
-    font-weight: bold;
-    margin-left: 5px;
-}
-button {
-    background-color: black;
-    color: white;
-    padding: 10px;
-    text-decoration: none;
-    text-align: center;
-    border-radius: 2px;
-    margin: 0 5px 0 5px;
-    width: 100px;
-}
+    .category__box p {
+        font-weight: bold;
+        margin-left: 5px;
+    }
 
-button, button:focus, button:active {
-    outline: none !important;
-    box-shadow: none !important;
-    border: none;
-}
+    button {
+        background-color: black;
+        color: white;
+        padding: 10px;
+        text-decoration: none;
+        text-align: center;
+        border-radius: 2px;
+        margin: 0 5px 0 5px;
+        width: 100px;
+    }
 
-button:hover {
-    background-color: #272727;
-}
+    button, button:focus, button:active {
+        outline: none !important;
+        box-shadow: none !important;
+        border: none;
+    }
+
+    button:hover {
+        background-color: #272727;
+    }
     
-/*SLIDESHOW BOX*/
+/*SLIDESHOW*/
 .slide__box{
     max-width: 80%;
     position: relative;
@@ -46,24 +51,28 @@ button:hover {
     justify-content: center;
 }
 
-.model {
-    display: none;
-    width: 100%;
-}
+    .model {
+        display: none;
+        width: 100%;
+    }
 
-.model:first-child {
-    display: block;
-}
+    .model:first-child {
+        display: block;
+    }
 
-.model img {
-    width: 100%
-}
+    .model img {
+        width: 100%
+    }
 
-/*PREV & NEXT*/
+    .slide__text {
+        margin-top: 10px;
+    }
+
+/*SLIDESHOW - PREV & NEXT*/
 .prev, .next {
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    top: 40%;
     width: auto;
     color: white;
     font-weight: bold;
@@ -72,24 +81,21 @@ button:hover {
     user-select: none;
     padding: 5px;
 }
-.next {
-    right: 0;
-}
 
-.prev:hover, .next:hover {
-    color: #272727;
-}
+    .next {
+        right: 0;
+    }
 
-.fade {
-    animation-name: fade;
-    animation-duration: 5s;
-}
+    .prev:hover, .next:hover {
+        color: #272727;
+    }
 
-@keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-}
+    .fade {
+        animation-name: fade;
+        animation-duration: 2s;
+    }
 
-.slide__text {
-    margin-top: 10px;
-}
+    @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+    }
