@@ -4,23 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="slide.css">
+    <script src="slide.js"></script>
 </head>
 <body>
-    <!--SLIDE CONTAINER-->
-    <div class="slide__container">
-        <p>Hvor vil du starte?</p>
-        <div class="category__box">
-            <button>Damer</button>
-            <button>Herre</button>
-            <button>Børn</button>
+    <div class="wrapper">
+        <!--SLIDE CONTAINER-->
+        <div class="slide__container">
+            <div class="category__box">
+                <p>Hvor vil du starte?</p>
+                    <button>Damer</button>
+                    <button>Herrer</button>
+                    <button>Børn</button>
+            </div>
+            <!--SLIDESHOW-->
+            <div class="slide__box">
+                <img class="model fade" src="images/model1.webp">
+                <img class="model fade" src="images/model3.webp">
+                <img class="model fade" src="images/model2.webp">
+                <img class="model fade" src="images/model4.webp">
+
+                <!--PREV and NEXT BUTTONS-->
+                <a class="prev" onclick="plusSlides (-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides (1)">&#10095;</a>
+            </div>
         </div>
-    <!--SLIDESHOW-->
-        <div class="slide__box">
-            <img class="model" src="images/model1.webp">
-            <img class="model" src="images/model2.webp">
-            <img class="model" src="images/model3.webp">
-            <img class="model" src="images/model4.webp">
-        </div>
-    </div>   
+    </div>     
+    <script src="slide.js"></script>
 </body>
 </html>
