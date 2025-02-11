@@ -125,3 +125,49 @@ body {
         from {opacity: .4}
         to {opacity: 1}
     }
+
+/*TABLET*/
+@media only screen and (min-width:768px) {
+    .slide__container {
+        display: flex;
+        flex: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        height: auto;
+    }
+        .category__box {
+            width: 20%;
+            padding: 20px;
+            position: relative;
+            bottom: 10px;
+        }
+
+
+        .slide__box {
+            width: 60%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide__text {
+            position: absolute;
+            left: 100%;
+            margin-left: 20px;
+            text-align: left;
+            width: 50%;
+        }
+
+        .model {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .model img {
+            width: 100%;
+            max-width: 500px;
+        }
+}
