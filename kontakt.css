@@ -30,22 +30,16 @@ input[type="email"], button {
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
+    margin-top: 10px;
 }
 
-.popup-menu {
+.popup {
     display: none;
     background: #f4f4f4;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-top: 10px;
-}
-
-.tilmeldknap {
-    background: black;
-    color: white;
-    cursor: pointer;
-    border: none;
 }
 
 .alternativerknap {
@@ -55,21 +49,73 @@ input[type="email"], button {
     text-align: left;
 }
 
-/* Layout af checkboxe i 4 rækker og 2 kolonner */
-.popup-menu {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* To kolonner */
-    grid-template-rows: repeat(4, auto); /* Fire rækker */
-    gap: 10px; /* Afstand mellem checkboxene */
-    padding: 10px;
-    border: 1px solid #ccc;
-    background-color: #f4f4f4;
+.tilmeldknap {
+    background: black;
+    color: white;
+    cursor: pointer;
+    border: none;
 }
 
-/* For at få popuppen til at have lidt luft og en pænere styling */
-.popup-menu label {
+
+
+/* Fjerner standard blå checkbokse */
+input[type="checkbox"] {
+    display: none;
+  }
+  
+  label {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-}
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+    padding-left: 30px;
+    user-select: none;
+  }
+  
+  /* Skaber custom sort checkbox */
+  label .checkbox {
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: black; 
+    border-radius: 4px; 
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  /* Skaber fluebenet inden i boksen */
+  input[type="checkbox"]:checked + .checkbox::after {
+    content: '\2713';
+    color: white; 
+    font-size: 16px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+  }
+  
+  /* Når checkboxen er checked ændres baggrund til sort og flueben vises */
+  input[type="checkbox"]:checked + .checkbox {
+    background-color: black; /* Sort baggrund når markeret */
+  }
+  
+  /* Når checkboxen er unchecked ændres baggrund til hvid */
+  input[type="checkbox"]:not(:checked) + .checkbox {
+    background-color: white; /* Hvid baggrund når ikke markeret */
+    border: 2px solid black; /* Sort kant */
+  }
+  
+  input[type="checkbox"]:not(:checked):hover + .checkbox {
+    background-color: gray;
+  }
+  
+
+  input[type="checkbox"]:checked:hover + .checkbox {
+    background-color: gray;
+  }
+  
+  /* Span-tekst */
+  label span {
+    padding-left: 10 px;
+  }
 

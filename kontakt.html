@@ -6,6 +6,7 @@
     <title>Der burde nok ikke være en titel her</title>
     <link rel="stylesheet" href="kontakt.css">
     <script src="jquery.js"></script>
+    <script src="kontakt.js"></script>
 </head>
 <body>    
     <div class="container">
@@ -22,15 +23,58 @@
             
             <button type="button" class="alternativerknap" id="togglePopup">Flere alternativer ▼</button>
             
-            <div class="popup-menu" id="popupMenu">
-                <label><input type="checkbox" class="preference" value="produkt"> Produktpåmindelser</label>
-                <label><input type="checkbox" class="preference" value="anbefalinger"> Anbefalinger</label>
-                <label><input type="checkbox" class="preference" value="fashion"> Fashion update</label>
-                <label><input type="checkbox" class="preference" value="stories"> Stories</label>
-                <label><input type="checkbox" class="preference" value="dealsogsale"> Deals & sale</label>
-                <label><input type="checkbox" class="preference" value="dinebrandsogcreators"> Dine brands og creators</label>
-                <label><input type="checkbox" class="preference" value="størrelsespåmindelser"> Størrelsespåmindelser</label>
-                <label><input type="checkbox" class="preference" value="surveys"> Surveys</label>
+            <div class="popup" id="popupMenu">
+
+            <label> 
+                <input type="checkbox" class="valgmulighed" value="produktpåmindelser" checked>
+                <span class="checkbox"></span>
+                Produktpåmindelser
+            </label>
+
+            <!-- checkbox indeholder en value, fordi den eller bare ville stå som "on" i consol.log, når der trykkes tilmeld -->
+
+              <label>
+                <input type="checkbox" class="valgmulighed" value="anbefalinger" checked>
+                <span class="checkbox"></span>
+                Anbefalinger
+              </label>
+
+              <label>
+                <input type="checkbox" class="valgmulighed" value="fashion" checked>
+                <span class="checkbox"></span>
+                Fashion update
+              </label>
+
+              <label>
+                <input type="checkbox" class="valgmulighed" value="stories" checked>
+                <span class="checkbox"></span>
+                Stories
+              </label>
+
+              <label>
+                <input type="checkbox" class="valgmulighed" value="dealsogsale" checked>
+                <span class="checkbox"></span>
+                Deals & sale
+              </label>
+
+              <label>
+                <input type="checkbox" class="valgmulighed" value="dinebrandsogcreators" checked>
+                <span class="checkbox"></span>
+                Dine brands og creators
+              </label>
+
+              <label>
+                <input type="checkbox" class="valgmulighed" value="størrelsespåmindelser" checked>
+                <span class="checkbox"></span>
+                Størrelsespåmindelser
+              </label>
+
+              <label>
+                <input type="checkbox" class="valgmulighed" value="surveys" checked>
+                <span class="checkbox"></span>
+                Surveys
+              </label>
+
             </div>
             
             <button type="submit" class="tilmeldknap">Tilmeld mig</button>
@@ -38,6 +82,5 @@
     </div>
 
     </div>
-    <script src="kontakt.js"></script>
 </body>
 </html>
