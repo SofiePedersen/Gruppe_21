@@ -134,27 +134,91 @@ body {
 /*TABLET*/
 @media only screen and (min-width:768px) {
     .slide__container {
-        display: flex;
-        flex-direction: row;
         height: 450px;
-        position: relative;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
     }
 
-    /*KATEGORI BOKS*/
-        .category__box {
-            width: 50%;
-            padding: 20px;
-            position: absolute;
-            bottom: 10px;
-            right: 0;
+    /*SLIDE SHOW*/
+    .slide__box {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+
+        .model {
             display: flex;
-            flex-direction: column;
-            align-items: flex-start;
+            width: 100%;
+            position: relative;
         }
+
+        .model__img-box {
+            max-width: 50%;
+            display: flex;
+            flex: 1 1 50%;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        .model__img-box img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .slide__text {
+            display: flex;
+            flex: 1 1 50%;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 50%;
+            text-align: left;
+            box-sizing: border-box;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 50%;
+            transition: 0.3s ease;
+        }
+    
+        .prev {
+            left: 10px; 
+        }
+    
+        .next {
+            right: 10px;
+        }
+    
+
+    /*KATEGORI BOKS*/
+    .category__box {
+        box-sizing: border-box;
+        max-width: 50%;
+        padding: 0 0 10px 0;
+        position: absolute;
+        bottom: 10px;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
         .category__box p {
             font-weight: bold;
-            margin-bottom: 5px;
+            margin: 0 0 5px 0;
         }
 
         .category__box .buttons {
@@ -167,33 +231,5 @@ body {
         button {
             display: inline-block;
             margin: 5px;
-        }
-
-    /*SLIDE SHOW*/
-        .slide__box {
-            display: flex;
-            flex-direction: row;
-            width: 100%;
-            height: 100%;
-        }
-
-        .model {
-            width: 50%;
-            display: flex;
-            flex-direction: row;
-        }
-
-        .model img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .slide__text {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            width: 50%;
-            margin-left: 20px;
-            text-align: left;
         }
 }
