@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #f8f8f8;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+label, h3, p {
+    display: block;
+    margin: 10px 0;
+}
+
+input[type="email"], button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.popup-menu {
+    display: none;
+    background: #f4f4f4;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.tilmeldknap {
+    background: black;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+.alternativerknap {
+    background: #e0e0e0;
+    cursor: pointer;
+    border: none;
+    text-align: left;
+}
+
+/* Layout af checkboxe i 4 rækker og 2 kolonner */
+.popup-menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* To kolonner */
+    grid-template-rows: repeat(4, auto); /* Fire rækker */
+    gap: 10px; /* Afstand mellem checkboxene */
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f4f4f4;
+}
+
+/* For at få popuppen til at have lidt luft og en pænere styling */
+.popup-menu label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
