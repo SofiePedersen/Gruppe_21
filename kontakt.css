@@ -13,6 +13,18 @@
   padding-top: 3%;
 }
 
+.kontakt__wrapper {
+  background-color: white;
+  padding: 2%;
+  width: 33%;
+}
+
+.checkbox__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
 .kontakt__tekstbox {
   align-self: flex-start;
   padding-right: 5%;
