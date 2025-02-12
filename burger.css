@@ -88,7 +88,7 @@ header {
     width: 132px;
 }
 
-#login {
+#login__mikkel {
     width: 33%;
     display: flex;
     justify-content: flex-end;
@@ -163,6 +163,7 @@ header {
     background-color: white;
     height: 2.5rem;
     width: 2.5rem;
+    margin: 0;
 }
 
 #logo-small-header {
@@ -181,7 +182,6 @@ header {
 }
 
 .small-header--top__login {
-    background-color: aqua;
     width: 200px;
 }
 
@@ -216,6 +216,11 @@ header {
 
     .top-banner__nav a {
         font-size: 8px;
+    }
+
+    .user-icon{
+        display: flex;
+        justify-content: flex-end;
     }
   }
 

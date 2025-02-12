@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     const userIcon = document.getElementById("userIcon");
-
+    
     let isDropdownOpen = false;
-
+    
     //  Opret dropdown-menu dynamisk
     const dropdownMenu = document.createElement("div");
     dropdownMenu.id = "dropdownMenu";
@@ -14,37 +14,37 @@ document.addEventListener("DOMContentLoaded", function () {
     loginBtn.textContent = "Log ind";
     loginBtn.classList.add("login-btn");
     dropdownMenu.appendChild(loginBtn);
-
+    
     //  "Tilmeld dig" med separat tekst
     const registerWrapper = document.createElement("div");
     registerWrapper.classList.add("register-wrapper");
-
+    
     const registerLink = document.createElement("a");
     registerLink.href = "#";
     registerLink.textContent = "Tilmeld dig";
     registerLink.classList.add("register-btn");
-
+    
     const registerText = document.createElement("p");
     registerText.textContent = " - på et splitsekund";
     registerText.classList.add("register-text");
-
+    
     registerWrapper.appendChild(registerLink);
     registerWrapper.appendChild(registerText);
     dropdownMenu.appendChild(registerWrapper);
-
+    
     //  Resten af menu-elementerne
     const menuItems = ["Din oversigt", "Ordrer", "Returnér vare", "Hjælp & kontakt"];
-
+    
     for (let i = 0; i < menuItems.length; i++) {
         let menuItem = document.createElement("a");
         menuItem.href = "#";
         menuItem.textContent = menuItems[i];
-
+        
         dropdownMenu.appendChild(menuItem);
     }
-
+    
     userIcon.appendChild(dropdownMenu);
-
+    
     //  Hover-effekt til at vise/skjule dropdown-menu
     userIcon.addEventListener("mouseover", function () {
         if (!isDropdownOpen) {
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
             dropdownMenu.style.display = "block";
         }
     });
-
+    
     userIcon.addEventListener("mouseout", function () {
         if (isDropdownOpen) {
             isDropdownOpen = false;
