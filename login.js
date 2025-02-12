@@ -3,19 +3,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let isDropdownOpen = false;
 
-    // 🔹 Opret dropdown-menu dynamisk
+    //  Opret dropdown-menu dynamisk
     const dropdownMenu = document.createElement("div");
     dropdownMenu.id = "dropdownMenu";
     dropdownMenu.style.display = "none";
 
-    // 🔹 "Log ind"-knappen (Sort baggrund, hvid skrift)
+    //  "Log ind"-knappen (Sort baggrund, hvid skrift)
     const loginBtn = document.createElement("a");
     loginBtn.href = "#";
     loginBtn.textContent = "Log ind";
     loginBtn.classList.add("login-btn");
     dropdownMenu.appendChild(loginBtn);
 
-    // 🔹 "Tilmeld dig" med separat tekst (skal være under Log ind)
+    //  "Tilmeld dig" med separat tekst
     const registerWrapper = document.createElement("div");
     registerWrapper.classList.add("register-wrapper");
 
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
     registerWrapper.appendChild(registerText);
     dropdownMenu.appendChild(registerWrapper);
 
-    // 🔹 Resten af menu-elementerne
+    //  Resten af menu-elementerne
     const menuItems = ["Din oversigt", "Ordrer", "Returnér vare", "Hjælp & kontakt"];
 
     for (let i = 0; i < menuItems.length; i++) {
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     userIcon.appendChild(dropdownMenu);
 
-    // 🔹 Hover-effekt til at vise/skjule dropdown-menu
+    //  Hover-effekt til at vise/skjule dropdown-menu
     userIcon.addEventListener("mouseover", function () {
         if (!isDropdownOpen) {
             isDropdownOpen = true;
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // 🔹 INJICERER CSS DIREKTE MED JAVASCRIPT
+    //  INJICERER CSS DIREKTE MED JAVASCRIPT
     const style = document.createElement("style");
     style.innerHTML = `
         #dropdownMenu {
