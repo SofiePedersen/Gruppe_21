@@ -187,12 +187,12 @@ header {
 }
 
 .small-header--bottom {
-    display: flex;
+    display: grid;
+    grid-template-columns: 5fr 95fr;
 }
 
 .small-header-burgermenu {
-    width: 5%;
-    padding: 15px 25px;
+    padding: 10px 15px;
 
     display: flex;
     justify-content: center;
@@ -201,15 +201,12 @@ header {
     border: 1px solid #d0d1d3;
 }
 
-.small-header__searchbar {
-    display: flex;
-}
-
 .small-header__searchbar input{
-    width: 95vw;
     padding-left: 3%;
     border: 1px solid #d0d1d3;
     border-left: none;
+    height: 100%;
+    width: 100%;
 }
 
 @media screen and (max-width: 1375px) {
