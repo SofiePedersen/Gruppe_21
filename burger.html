@@ -6,6 +6,7 @@
     <script src="burger.js" defer></script>
 </head>
 <body>
+    <!-- GREYBOX OVER THE HEADER -->
     <div class="top-banner">
         <nav class="top-banner__nav">
             <a href="#">Alle danmarks favouritmærker</a>
@@ -13,6 +14,7 @@
             <a href="#">30 Dages returret</a>
         </nav>
     </div>
+    <!-- HEADER FULL SCREEN -->
     <header>
         <div class="header__top">
             <nav class="header__nav--category">
@@ -41,12 +43,26 @@
                 </ul>
             </nav>
             <div class="search">
-            <form class="header__search-bar">
-                <button class="header__search-button" type="submit"><img src="images/search-bar-loop.svg" alt="search-button" ></button>
-                <input class="header__search-input" type="text" placeholder="Søg">
-            </form>
-        </div>
+                <form class="header__search-bar">
+                    <button class="header__search-button" type="submit"><img src="images/search-bar-loop.svg" alt="search-button" ></button>
+                    <input class="header__search-input" type="text" placeholder="Søg">
+                </form>
+            </div>
         </div>
     </header>
+    <div class="small-header">
+        <div class="small-header--top">
+            <img id="logo-small-header" src="images/zalando-logo.svg" alt="logo-small-header" >
+            <div class="small-header--top__login"><p>login</p></div>
+        </div>
+        <div class="small-header--bottom">
+            <div class="small-header-burgermenu">
+                <img src="images/burger-menu-icon-black.svg" alt="burger-menu-icon" >
+            </div>
+            <div class="small-header__searchbar">
+                <input type="text" placeholder="Søg">
+            </div>
+        </div>
+    </div>
 </body>
 </html>
