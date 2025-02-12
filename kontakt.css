@@ -1,164 +1,199 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
-body {
-    background-color: #f8f8f8;
-    padding: 20px;
+.content-wrapper {
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3%;
+}
+
+.kontakt__tekstbox {
+  align-self: flex-start;
+  padding-right: 5%;
+  padding-top: 1%;
 }
 
 .kontakt__container {
-    max-width: 600px;
-    margin: auto;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-label, h3, p {
-    display: block;
-    margin: 10px 0;
+label,
+h3,
+p {
+  display: block;
+  margin: 10px 0;
 }
 
-input[type="email"], button {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-top: 10px;
+input[type="email"],
+button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 10px;
 }
 
 .kontakt__popup {
-    display: none;
-    background: #f4f4f4;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-top: 10px;
+  display: none;
+  background: #f4f4f4;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 10px;
 }
 
 .alternativerknap {
-    background: #e0e0e0;
-    cursor: pointer;
-    border: none;
-    text-align: left;
+  background: white;
+  cursor: pointer;
+  border: none;
+  text-align: left;
 }
 
 .tilmeldknap {
-    background: black;
-    color: white;
-    cursor: pointer;
-    border: none;
+  background: black;
+  color: white;
+  cursor: pointer;
+  border: none;
 }
 
+.radios {
+  display: flex;
+}
+
+.alternativerknap:hover {
+  background-color: #ccc;
+}
 
 
 /* Fjerner standard blå checkbokse */
 input[type="checkbox"] {
-    display: none;
-  }
-  
-  label {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    font-size: 16px;
-    position: relative;
-    padding-left: 30px;
-    user-select: none;
-  }
-  
-  /* Skaber custom sort checkbox */
-  label .checkbox {
-    position: absolute;
-    left: 0;
-    width: 20px;
-    height: 20px;
-    background-color: black; 
-    border-radius: 4px; 
-    transition: background-color 0.3s, border-color 0.3s;
-  }
-  
-  /* Skaber fluebenet inden i boksen */
-  input[type="checkbox"]:checked + .checkbox::after {
-    content: '\2713';
-    color: white; 
-    font-size: 16px;
-    position: absolute;
-    top: 2px;
-    left: 2px;
-  }
-  
-  /* Når checkboxen er checked ændres baggrund til sort og flueben vises */
-  input[type="checkbox"]:checked + .checkbox {
-    background-color: black; /* Sort baggrund når markeret */
-  }
-  
-  /* Når checkboxen er unchecked ændres baggrund til hvid */
-  input[type="checkbox"]:not(:checked) + .checkbox {
-    background-color: white; /* Hvid baggrund når ikke markeret */
-    border: 2px solid black; /* Sort kant */
-  }
-  
-  input[type="checkbox"]:not(:checked):hover + .checkbox {
-    background-color: gray;
-  }
-  
+  display: none;
+}
 
-  input[type="checkbox"]:checked:hover + .checkbox {
-    background-color: gray;
-  }
-  
-  /* Span-tekst */
-  label span {
-    padding-left: 10 px;
-  }
+label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+  position: relative;
+  padding-left: 30px;
+  user-select: none;
+}
+
+/* Skaber custom sort checkbox */
+label .checkbox {
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 4px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Skaber fluebenet inden i boksen */
+input[type="checkbox"]:checked+.checkbox::after {
+  content: '\2713';
+  color: white;
+  font-size: 16px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+
+/* Når checkboxen er checked ændres baggrund til sort og flueben vises */
+input[type="checkbox"]:checked+.checkbox {
+  background-color: black;
+  /* Sort baggrund når markeret */
+}
+
+/* Når checkboxen er unchecked ændres baggrund til hvid */
+input[type="checkbox"]:not(:checked)+.checkbox {
+  background-color: white;
+  /* Hvid baggrund når ikke markeret */
+  border: 2px solid black;
+  /* Sort kant */
+}
+
+input[type="checkbox"]:not(:checked):hover+.checkbox {
+  background-color: gray;
+}
+
+
+input[type="checkbox"]:checked:hover+.checkbox {
+  background-color: gray;
+}
+
+/* Span-tekst */
+label span {
+  padding-left: 10px;
+}
 
 
 /* MEDIAQUERY TIL DESKTOP */
-@media (min-width: 1024px) {
+@media (max-width: 1024px) {
 
-    .kontakt__tekstbox {
+  /* .kontakt__tekstbox {
         flex: 1;
         background-color: rgb(237, 237, 237);
         padding: 40px;
         width: 100%;
         height: 500px;
-    }
+    } */
 
-    .kontakt__wrapper {
-        justify-self: right;
-        display: flex-end;
-        background-color: white;
-        width: 50%;
-        height: 360px;
-        padding: 25px;
-    }
+  .content-wrapper{
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+    padding: 35px 0 15px 40px;
+    gap: 20px;
+  }
 
-    .kontakt__popup {
-        display: none;
-    }
+  .kontakt__tekstbox {
+    justify-content: center;
+    align-items: center;
+  }
 
-    .checkbox__grid {
-        display: grid;
-        grid-template-columns: auto;
-        gap: 10px;
-    }
+  .kontakt__wrapper {
+    justify-self: right;
+    align-self: flex-end;
+    background-color: white;
+    width: 100%;
+    padding: 25px;
+    margin-bottom: 25px;
+  }
 
-    .email__container {
-        display: flex;
-        flex-direction: column;
-    }
+  .kontakt__popup {
+    display: none;
+  }
 
-    .email__container label {
-        margin-bottom: 5px;
-        font-weight: bold;
-        background:white;
-        padding: 5px;
-    }
+  .checkbox__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .email__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .email__container label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    background: white;
+    padding: 5px;
+  }
 }

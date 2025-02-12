@@ -1,94 +1,99 @@
 <!DOCTYPE html>
 <html lang="da">
+  
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Der burde nok ikke være en titel her</title>
-    <link rel="stylesheet" href="kontakt.css">
-    <script src="jquery.js"></script>
-    <script src="kontakt.js"></script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Der burde nok ikke være en titel her</title>
+  <link rel="stylesheet" href="kontakt.css">
+  <script src="jquery.js"></script>
+  <script src="kontakt.js"></script>
 </head>
 
-<body>    
-        <div class="kontakt__tekstbox">
-            <h2>Tilbud, udgivelser og trends</h2>
-            <h3>Direkte i din indbakke</h3>
-            <p>Få rabatter, nyheder og modeinspiration med vores udvalgte nyhedsbreve.</p>
-        
+<body>
+  <div class="content-wrapper">
+    <div class="kontakt__tekstbox">
+      <h2>Tilbud, udgivelser og trends</h2>
+      <h3>Direkte i din indbakke</h3>
+      <p>Få rabatter, nyheder og modeinspiration med vores udvalgte nyhedsbreve.</p>
+    </div>
 
-<div class="kontakt__wrapper">
-
-                <form id="kontaktForm">
-
-                <div class="email__container">
-                    <label for="email">Din e-mail</label>
-                    <input type="email" id="email" required>
-                </div>
-            
+    <div class="kontakt__wrapper">
+      <form id="kontaktForm">
+        <div class="email__container">
+          <label for="email">Din e-mail</label>
+          <input type="email" id="email" required>
+        </div>
+        <div class="radios">
+          <div>
             <h3>Redigér dine præferencer</h3>
             <p>Hvad er du mest interesseret i?</p>
-                <label><input type="radio" name="mode" value="dame"> Damemode</label>
-                <label><input type="radio" name="mode" value="herre"> Herremode</label>
-            
+          </div>
+          <div>
+            <label><input type="radio" name="mode" value="dame"> Damemode</label>
+            <label><input type="radio" name="mode" value="herre"> Herremode</label>
+          </div>
+        </div>
         <button type="button" class="alternativerknap" id="togglePopup">Flere alternativer ▼</button>
-            
-                <div class="kontakt__popup" id="popupMenu">
 
-            <label> 
-                <input type="checkbox" class="valgmulighed" value="produktpåmindelser" checked>
-                <span class="checkbox"></span>
-                Produktpåmindelser
+        <div class="kontakt__popup" id="popupMenu">
+
+
+          <!-- checkbox indeholder en value, fordi den eller bare ville stå som "on" i consol.log, når der trykkes tilmeld -->
+          <div class="checkbox__grid">
+            <label>
+              <input type="checkbox" class="valgmulighed" value="produktpåmindelser" checked>
+              <span class="checkbox"></span>
+              Produktpåmindelser
+            </label>
+            <label>
+              <input type="checkbox" class="valgmulighed" value="anbefalinger" checked>
+              <span class="checkbox"></span>
+              Anbefalinger
             </label>
 
-            <!-- checkbox indeholder en value, fordi den eller bare ville stå som "on" i consol.log, når der trykkes tilmeld -->
-        <div class="checkbox__grid">
-              <label>
-                <input type="checkbox" class="valgmulighed" value="anbefalinger" checked>
-                <span class="checkbox"></span>
-                Anbefalinger
-              </label>
+            <label>
+              <input type="checkbox" class="valgmulighed" value="fashion" checked>
+              <span class="checkbox"></span>
+              Fashion update
+            </label>
 
-              <label>
-                <input type="checkbox" class="valgmulighed" value="fashion" checked>
-                <span class="checkbox"></span>
-                Fashion update
-              </label>
+            <label>
+              <input type="checkbox" class="valgmulighed" value="stories" checked>
+              <span class="checkbox"></span>
+              Stories
+            </label>
 
-              <label>
-                <input type="checkbox" class="valgmulighed" value="stories" checked>
-                <span class="checkbox"></span>
-                Stories
-              </label>
+            <label>
+              <input type="checkbox" class="valgmulighed" value="dealsogsale" checked>
+              <span class="checkbox"></span>
+              Deals & sale
+            </label>
 
-              <label>
-                <input type="checkbox" class="valgmulighed" value="dealsogsale" checked>
-                <span class="checkbox"></span>
-                Deals & sale
-              </label>
+            <label>
+              <input type="checkbox" class="valgmulighed" value="dinebrandsogcreators" checked>
+              <span class="checkbox"></span>
+              Dine brands og creators
+            </label>
 
-              <label>
-                <input type="checkbox" class="valgmulighed" value="dinebrandsogcreators" checked>
-                <span class="checkbox"></span>
-                Dine brands og creators
-              </label>
+            <label>
+              <input type="checkbox" class="valgmulighed" value="størrelsespåmindelser" checked>
+              <span class="checkbox"></span>
+              Størrelsespåmindelser
+            </label>
 
-              <label>
-                <input type="checkbox" class="valgmulighed" value="størrelsespåmindelser" checked>
-                <span class="checkbox"></span>
-                Størrelsespåmindelser
-              </label>
-
-              <label>
-                <input type="checkbox" class="valgmulighed" value="surveys" checked>
-                <span class="checkbox"></span>
-                Surveys
-              </label>
-            </div>
+            <label>
+              <input type="checkbox" class="valgmulighed" value="surveys" checked>
+              <span class="checkbox"></span>
+              Surveys
+            </label>
+          </div>
         </div>
-            
+
         <button type="submit" class="tilmeldknap">Tilmeld mig</button>
-        </form>
-</div>
+      </form>
+    </div>
+  </div>
 </body>
+
 </html>
