@@ -1,12 +1,12 @@
-let slideIndex = 1;
-let slideInterval;
+let slideIndex = 1; //global variabel 
+let slideInterval; // global variabel
 
-//array med farveskift 
+//array med farveskift (liste)
 const colors = ["#C46318", "#F0ECC9", "#F19406", "#EBD077"];
 
 //lytter til DOM er læst
 document.addEventListener ("DOMContentLoaded", function () {
-    showSlide(slideIndex);
+    showSlide(slideIndex); //når siden er læst, vises første slide
     startAutoSlide(); //starter automatisk skift   
 });
 
@@ -17,9 +17,10 @@ function plusSlides (n) {
 }
 
 //SLIDESHOW + BAGGRUNDS FARVE
-function showSlide (n) {
+function showSlide (n) { //ændrer slide, ved at lægge n til 
     let slides = document.getElementsByClassName ("model");
-    let container = document.querySelector (".slide__container");
+    let container = document.querySelector (".slide__container"); 
+    
     if (n > slides.length) {
         slideIndex = 1;
     }
@@ -28,12 +29,18 @@ function showSlide (n) {
     }
     //for-loop
     for (let i = 0; i < slides.length; i++) {
-        slides [i].style.display = "none";
+        slides [i].classList.remove("active");
+        slides [i].style.visibility = "hidden";
+        slides [i].style.opacity ="0";
+        slides [i].style.position = "absolute";
     }
+    
+    slides [slideIndex - 1].classList.add ("active");
+    slides [slideIndex - 1].style.visibility = "visible";
+    slides [slideIndex - 1].style.opacity = "1";
+    slides [slideIndex - 1].style.position = "relative";
 
-    slides [slideIndex - 1].style.display = "block";
-
-    //skifter farve basseret på billedet
+    //skifter farve basseret på billedet, modulos = rest 
     container.style.backgroundColor = colors [(slideIndex - 1) % colors.length];
 }
 
