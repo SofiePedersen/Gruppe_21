@@ -42,9 +42,6 @@ nav ul li a {
     font-weight: bold;
 }
 
-nav ul li a:hover {
-    color: #ff6900; /* Zalando's orange farve */
-}
 
 /* Brugerikon */
 #userIcon {
@@ -56,4 +53,4 @@ nav ul li a:hover {
     display: inline-block;
 }
 
-/* ❌ FJERNET ALLE STYLES RELATERET TIL DROPDOWN-MENUEN! */
+/* FJERNET ALLE STYLES RELATERET TIL DROPDOWN-MENUEN! */
