@@ -10,7 +10,7 @@ body {
     padding: 20px;
 }
 
-.container {
+.kontakt__container {
     max-width: 600px;
     margin: auto;
     background: white;
@@ -33,7 +33,7 @@ input[type="email"], button {
     margin-top: 10px;
 }
 
-.popup {
+.kontakt__popup {
     display: none;
     background: #f4f4f4;
     padding: 10px;
@@ -119,3 +119,46 @@ input[type="checkbox"] {
     padding-left: 10 px;
   }
 
+
+/* MEDIAQUERY TIL DESKTOP */
+@media (min-width: 1024px) {
+
+    .kontakt__tekstbox {
+        flex: 1;
+        background-color: rgb(237, 237, 237);
+        padding: 40px;
+        width: 100%;
+        height: 500px;
+    }
+
+    .kontakt__wrapper {
+        justify-self: right;
+        display: flex-end;
+        background-color: white;
+        width: 50%;
+        height: 360px;
+        padding: 25px;
+    }
+
+    .kontakt__popup {
+        display: none;
+    }
+
+    .checkbox__grid {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 10px;
+    }
+
+    .email__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .email__container label {
+        margin-bottom: 5px;
+        font-weight: bold;
+        background:white;
+        padding: 5px;
+    }
+}

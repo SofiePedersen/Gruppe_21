@@ -11,21 +11,29 @@
 </head>
 
 <body>    
-    <div class="kontakt--container">
+        <div class="kontakt__tekstbox">
             <h2>Tilbud, udgivelser og trends</h2>
+            <h3>Direkte i din indbakke</h3>
             <p>Få rabatter, nyheder og modeinspiration med vores udvalgte nyhedsbreve.</p>
         
-        <form id="kontaktForm">
-            <label for="email">Din e-mail:</label>
-            <input type="email" id="email" required>
+
+<div class="kontakt__wrapper">
+
+                <form id="kontaktForm">
+
+                <div class="email__container">
+                    <label for="email">Din e-mail</label>
+                    <input type="email" id="email" required>
+                </div>
             
             <h3>Redigér dine præferencer</h3>
+            <p>Hvad er du mest interesseret i?</p>
                 <label><input type="radio" name="mode" value="dame"> Damemode</label>
                 <label><input type="radio" name="mode" value="herre"> Herremode</label>
             
         <button type="button" class="alternativerknap" id="togglePopup">Flere alternativer ▼</button>
             
-        <div class="popup" id="popupMenu">
+                <div class="kontakt__popup" id="popupMenu">
 
             <label> 
                 <input type="checkbox" class="valgmulighed" value="produktpåmindelser" checked>
@@ -34,7 +42,7 @@
             </label>
 
             <!-- checkbox indeholder en value, fordi den eller bare ville stå som "on" i consol.log, når der trykkes tilmeld -->
-
+        <div class="checkbox__grid">
               <label>
                 <input type="checkbox" class="valgmulighed" value="anbefalinger" checked>
                 <span class="checkbox"></span>
@@ -76,13 +84,11 @@
                 <span class="checkbox"></span>
                 Surveys
               </label>
-
             </div>
+        </div>
             
-            <button type="submit" class="tilmeldknap">Tilmeld mig</button>
+        <button type="submit" class="tilmeldknap">Tilmeld mig</button>
         </form>
-    </div>
-
-    </div>
+</div>
 </body>
 </html>
