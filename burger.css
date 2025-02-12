@@ -89,7 +89,6 @@ header {
 }
 
 #login {
-    background-color: green;
     width: 33%;
     display: flex;
     justify-content: flex-end;
