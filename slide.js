@@ -1,8 +1,8 @@
-let slideIndex = 1; //global variabel 
+let slideIndex = 1; //global variabel - let fordi det ændres
 let slideInterval; // global variabel
 
 //array med farveskift (liste)
-const colors = ["#C46318", "#F0ECC9", "#F19406", "#EBD077"];
+const colors = ["#C46318", "#F0ECC9", "#F19406", "#EBD077"]; //const skal ikke kunne ændres
 
 //lytter til DOM er læst
 document.addEventListener ("DOMContentLoaded", function () {
@@ -12,15 +12,16 @@ document.addEventListener ("DOMContentLoaded", function () {
 
 // NEXT & PREV
 function plusSlides (n) {
-    showSlide (slideIndex +=n);
+    showSlide (slideIndex +=n); //let ændres første gang her
     resetAutoSlide (); //nulstiller autoslide ved brugerklik
 }
 
 //SLIDESHOW + BAGGRUNDS FARVE
 function showSlide (n) { //ændrer slide, ved at lægge n til 
-    let slides = document.getElementsByClassName ("model");
+    let slides = document.getElementsByClassName ("model"); //lokal variabel
     let container = document.querySelector (".slide__container"); 
     
+    //boolske operatorer
     if (n > slides.length) {
         slideIndex = 1;
     }
