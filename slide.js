@@ -6,8 +6,18 @@ const colors = ["#C46318", "#F0ECC9", "#F19406", "#EBD077"]; //const skal ikke k
 
 //venter til window er læst
 window.onload = function () {
+    let container = document.querySelector (".slide__container");
+
+    //tilføjer no transition klasse til container på første læs
+    container.classList.add ("no-transition");
+
     showSlide(slideIndex); //når siden er læst, vises første slide
-    startAutoSlide(); //starter automatisk skift   
+    startAutoSlide(); //starter automatisk skift 
+    
+    //fjern no transition klasse efter første slide er vist
+    setTimeout (function() {
+        container.classList.remove ("no-transition");
+    }, 100);
 };
 
 // NEXT & PREV
