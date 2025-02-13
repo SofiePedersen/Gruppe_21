@@ -51,7 +51,8 @@ function showSlide (n) { //ændrer slide, ved at lægge n til
     slides [slideIndex - 1].style.opacity = "1";
     slides [slideIndex - 1].style.position = "relative";
 
-    //skifter farve basseret på billedet, modulos = rest 
+    //skifter farve basseret på billedet, modulus = rest
+    // så 1 -1 = 0 skifter til array 0, fordi rest er 0 osv
     container.style.backgroundColor = colors [(slideIndex - 1) % colors.length];
 }
 
