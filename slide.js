@@ -4,7 +4,7 @@ let slideInterval; // global variabel
 //array med farveskift (liste)
 const colors = ["#C46318", "#F0ECC9", "#F19406", "#EBD077"]; //const skal ikke kunne ændres
 
-//lytter til window er læst
+//venter til window er læst
 window.onload = function () {
     showSlide(slideIndex); //når siden er læst, vises første slide
     startAutoSlide(); //starter automatisk skift   
