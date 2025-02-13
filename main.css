@@ -10,12 +10,31 @@
     margin-right: 10px;
 }
 
+.info-container {
+    display: flex;
+    flex-direction: column;
+    padding: 60px;
+    gap: 20px;
+}
+
+.info-container__text {
+    display: flex;
+    flex-direction: column;
+    line-height: 20px;
+}
+
+.info-container__text p {
+    font-size: 18px;
+}
+
+.info-container__text h2 {
+    font-size: 20px;
+}
+
 @media screen and (max-width: 768px){
     /* .slide__container {
         height: 
     } */
-}
-
 .info-container {
     display: flex;
     flex-direction: column;
@@ -34,4 +53,5 @@
 
 .info-container__text h2 {
     font-size: 20px;
+}
 }

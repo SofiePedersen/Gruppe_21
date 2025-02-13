@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function() {
     let popupVisible = false;
     const toggleButton = document.getElementById("togglePopup");
@@ -15,9 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
         } else {
             popupMenu.style.display = "none";
             toggleButton.textContent = "Flere alternativer ▼";
-        }
-
-        
+        }        
     });
     
     // Event listener for form submit

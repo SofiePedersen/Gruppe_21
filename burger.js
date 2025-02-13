@@ -6,6 +6,7 @@ const hideMenuIcon = document.getElementById("hideMenu");
 
 burgerIcon.addEventListener("click", function() {
     showMenu.style.display = "block";
+    populateImages();
 });
 
 hideMenuIcon.addEventListener("click", function(){
@@ -13,7 +14,7 @@ hideMenuIcon.addEventListener("click", function(){
 });
 
 // Creating an array of objects to insert into my burgermenu
-window.onload = function () {
+function populateImages () {
 
     const images = [
     {
@@ -57,7 +58,9 @@ const burgerCategoryName = document.getElementsByClassName("category-name");
     //2 del. er hvor længe vi skal kører loopet.
     //3 del. er hvad der skal ske, når loopet har kørt 1 gang.
     for (let i = 0; i < images.length; i++) {
-        burgerImg[i].setAttribute('src', "./images/" + images[i].imagesrc);
+        burgerImg[i].setAttribute('src', './images/' + images[i].imagesrc);
         burgerCategoryName[i].innerHTML = images[i].imagetitle;
+        console.log(images[i].imagesrc);
+        
     }
 };
