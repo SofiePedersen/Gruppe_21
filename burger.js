@@ -61,6 +61,5 @@ const burgerCategoryName = document.getElementsByClassName("category-name");
         burgerImg[i].setAttribute('src', './images/' + images[i].imagesrc);
         burgerCategoryName[i].innerHTML = images[i].imagetitle;
         console.log(images[i].imagesrc);
-        
     }
 };
