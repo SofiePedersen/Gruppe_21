@@ -4,10 +4,20 @@ let slideInterval; // global variabel
 //array med farveskift (liste)
 const colors = ["#C46318", "#F0ECC9", "#F19406", "#EBD077"]; //const skal ikke kunne ændres
 
-//lytter til DOM er læst
+//venter til window er læst
 window.onload = function () {
+    let container = document.querySelector (".slide__container");
+
+    //tilføjer no transition klasse til container på første læs
+    container.classList.add ("no-transition");
+
     showSlide(slideIndex); //når siden er læst, vises første slide
-    startAutoSlide(); //starter automatisk skift   
+    startAutoSlide(); //starter automatisk skift 
+    
+    //fjern no transition klasse efter første slide er vist
+    setTimeout (function() {
+        container.classList.remove ("no-transition");
+    }, 100);
 };
 
 // NEXT & PREV
@@ -41,7 +51,8 @@ function showSlide (n) { //ændrer slide, ved at lægge n til
     slides [slideIndex - 1].style.opacity = "1";
     slides [slideIndex - 1].style.position = "relative";
 
-    //skifter farve basseret på billedet, modulos = rest 
+    //skifter farve basseret på billedet, modulus = rest
+    // så 1 -1 = 0 skifter til array 0, fordi rest er 0 osv
     container.style.backgroundColor = colors [(slideIndex - 1) % colors.length];
 }
 
