@@ -21,33 +21,33 @@ window.onload = function () {
         imagetitle: "Tøj"
     },
     {
-        imagesrc: "clothes-image.webp",
-        imagetitle: "Tøj"
+        imagesrc: "shoes-image.webp",
+        imagetitle: "Sko"
     },
     {
-        imagesrc: "clothes-image.webp",
-        imagetitle: "Tøj"
+        imagesrc: "sport-image.webp",
+        imagetitle: "Sport"
     },
     {
-        imagesrc: "clothes-image.webp",
-        imagetitle: "Tøj"
+        imagesrc: "acc-image.webp",
+        imagetitle: "Accesories"
     },
     {
-        imagesrc: "clothes-image.webp",
-        imagetitle: "Tøj"
+        imagesrc: "desingermode-image.webp",
+        imagetitle: "Designermode"
     },
     {
-        imagesrc: "clothes-image.webp",
-        imagetitle: "Tøj"
+        imagesrc: "beauty-image.webp",
+        imagetitle: "Beauty"
     },
     {
-        imagesrc: "clothes-image.webp",
-        imagetitle: "Tøj"
+        imagesrc: "second-hand-image.webp",
+        imagetitle: "Second Hand"
     },
     {
-        imagesrc: "clothes-image.webp",
-        imagetitle: "Tøj"
-    },
+        imagesrc: "outlet-image.webp",
+        imagetitle: "Outlet"
+    }
 ];
 
 const burgerImg = document.getElementsByClassName("placeholderimg");
