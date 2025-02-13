@@ -5,10 +5,10 @@ let slideInterval; // global variabel
 const colors = ["#C46318", "#F0ECC9", "#F19406", "#EBD077"]; //const skal ikke kunne ændres
 
 //lytter til DOM er læst
-document.addEventListener ("DOMContentLoaded", function () {
+window.onload = function () {
     showSlide(slideIndex); //når siden er læst, vises første slide
     startAutoSlide(); //starter automatisk skift   
-});
+};
 
 // NEXT & PREV
 function plusSlides (n) {
