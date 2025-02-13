@@ -1,7 +1,10 @@
+const userIcon = document.getElementById("userIcon");
 
-document.addEventListener("DOMContentLoaded", function () {
-    const userIcon = document.getElementById("userIcon");
-    
+userIcon.addEventListener("mouseenter", function () {
+    openDropdown();  
+});
+
+function openDropdown () {
     let isDropdownOpen = false;
     
     //  Opret dropdown-menu dynamisk
@@ -54,11 +57,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
     
-    userIcon.addEventListener("mouseout", function () {
+    userIcon.addEventListener("mouseleave", function () {
         if (isDropdownOpen) {
             isDropdownOpen = false;
             dropdownMenu.style.display = "none";
+            
+            dropdownMenu.remove();
         }
+        
     });
 
     //  INJICERER CSS DIREKTE MED JAVASCRIPT
@@ -138,4 +144,4 @@ document.addEventListener("DOMContentLoaded", function () {
 }
     `;
     document.head.appendChild(style);
-});
+};
